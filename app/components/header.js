@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { ThemeToggler } from './theme-toggler';
 import { MenuSquare, Search } from 'lucide-react';
 import { FaDiscord, FaReddit, FaLinkedin, FaGithub } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-
+    const router = useRouter;
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -24,7 +26,7 @@ const Header = () => {
 
         <>
             <header
-                className={`from-myPurple to-myPink bg-gradient-to-r hidden lg:flex justify-between rounded-sm p-3 items-center text-white transition-all duration-300 ${isScrolled ? 'w-full z-50 m-0 fixed top-0 lg:px-80 md:px-40' : 'lg:w-[1024px] w-auto m-3 '
+                className={`from-myPurple to-myPink bg-gradient-to-r hidden lg:flex justify-between rounded-sm p-3 items-center text-white transition-all duration-300 ${isScrolled ? 'w-full z-100 m-0 fixed top-0 lg:px-80 md:px-40' : 'lg:w-[1024px] w-auto m-3 z-100'
                     }`}
             >
                 {/* Left Section */}
@@ -42,7 +44,7 @@ const Header = () => {
                 </div>
 
                 {/* Center Section */}
-                <h1 className="text-3xl font-bold">MAYUR</h1>
+                <h1 className="text-3xl font-bold"><Link href={"/"}>MAYUR</Link></h1>
 
                 {/* Right Section */}
                 <div className="flex gap-2 items-center w-1/2 justify-end">
