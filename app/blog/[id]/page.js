@@ -1,4 +1,4 @@
-import Header from '@/app/components/header'
+import Header from '../../components/header'
 import { User } from 'lucide-react'
 import React from 'react'
 
@@ -10,7 +10,12 @@ const BlogPage = ({ params: { id } }) => {
                 <div className='  w-full h-[600px] bg-pink-950 z-[0] text-white flex items-center flex-col'>
                     <Header /> Put your blog image here</div>
                 <div className='flex-grow flex flex-col  items-center max-w-[900px] mt-10 w-full'>
-                    BlogPage {id}
+                    <div className='w-full'>
+                        <div className='bg-myPurple p-2 items-center justify-center flex rounded-md w-20 h-10 mb-5'>
+                            Fashion
+                        </div>
+                    </div>
+                    {/* BlogPage {id} */}
                     <div className='w-full text-left'>
 
                         <h1 className='text-4xl font-semibold w-full text-left'>BLOG TITLE </h1>
@@ -20,8 +25,8 @@ const BlogPage = ({ params: { id } }) => {
 
                             </div>
                             <div className='flex flex-col gap-2 leading-4'>
-                                <p className='text-gray-700 dark:text-gray-300'>by <span className='font-medium'>Author</span></p>
-                                <p className='text-gray-700 dark:text-gray-300'> <span className='font-medium'>Date: 10/8/2023</span>   -   <span className='font-medium'>Views: 1000</span>   -   <span className='font-medium'>Comments: 10 </span></p>
+                                <p className='text-gray-700 dark:text-gray-300'><span className='italic'>by</span> <span className='font-medium text-white'>Author</span></p>
+                                <p className='text-gray-700 dark:text-gray-300'> <span className='font-medium'>March 10, 2023</span>   -   <span className='font-medium'> 1000 Views</span>   -   <span className='font-medium'> 10 Comments</span> - <span className='font-medium'>2 Min Read</span></p>
                             </div>
                         </div>
 
